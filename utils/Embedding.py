@@ -12,3 +12,13 @@ class LookUp:
         token_embeddings = self.embedding(token_id)
         return token_embedding
 
+def positionalEncoding(seq_len, embedding_size):
+    positions = torch.arange(seq_len, dtype=torch.float32, device=device).unsqueeze(1)
+    dims = torch.arange(d_model, dtype=torch.float32, device=device).unsqueeze(0)
+    angle_rates = 1 / torch.pow(10000, (2 * (dims // 2)) / d_model)
+    
+    pe = torch.zeros((seq_len, d_model))
+    pe[:, 0::2] = torch.sin(positions * angle_rates[:, 0::2])
+    pe[:, 1::2] = torch.cos(positions * angle_rates[:, 1::2])
+
+    return pe
