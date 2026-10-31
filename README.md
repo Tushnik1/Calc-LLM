@@ -28,3 +28,6 @@ For some the accuracy the next word generations how accurate it is from the test
 For others it may happen that whole sequence if accurate then only it is correct. Also, some can add weightage to wrongs and corrects based on their understanding of the training.
 
 For general discussion purpose the model has an accuracy of 73.48% (each equation answer is correct then only counted as correct else wrong.)
+
+One example where the shared model checkpoints is giving wrong answer is:
+<pre>99*99=9001 (instead of 9801) [WRONG]</pre>
