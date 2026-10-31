@@ -16,8 +16,10 @@ For generation part, we give prompt this prompt loops on generates next characte
 
 ## Training
 For 30 epochs the Model:
+<pre>
 Epoch [1/30] Train Loss: 1.7456 Val Loss: 1.6274
 Epoch [30/30] Train Loss: 1.0708 Val Loss: 1.0585
+</pre>
 ![Train vs Validation Loss](figures/loss.png)
 
 ## Discussion on accuracy and measuring it.
